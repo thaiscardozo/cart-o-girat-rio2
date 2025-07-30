@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url('../images/2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: Arial, sans-serif;
+}
+
+#container {
+  display: flex;
+  gap: 20px;
+}
+
+.cartao-postal {
+  width: 567px;     
+  height: 378px;    
+  perspective: 1000px; 
+}
+
+.cartao-postal-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.cartao-postal:hover .cartao-postal-inner {
+  transform: rotateY(180deg);
+}
+
+.cartao-postal-front,
+.cartao-postal-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.cartao-postal-front img,
+.cartao-postal-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cartao-postal-back {
+  transform: rotateY(180deg);
+}
