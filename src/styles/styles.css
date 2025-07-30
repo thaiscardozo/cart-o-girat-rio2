@@ -21,13 +21,6 @@ body {
 #container {
   display: flex;
   gap: 20px;
-  @media (max-width: 768px) {
-  #container {
-    flex-direction: column;
-    gap: 10px;  /* menos espaço no celular */
-  }
-}
-
 }
 
 .cartao-postal {
@@ -65,4 +58,19 @@ body {
 
 .cartao-postal-back {
   transform: rotateY(180deg);
+}
+*Responsividade*
+
+@media (max-width: 768px) {
+  #container {
+    flex-direction: column;  
+    gap: 10px;               
+  }
+
+  .cartao-postal {
+    width: 90%;              
+    max-width: 567px;        
+    aspect-ratio: 3 / 2;     
+    height: auto;            
+  }
 }
