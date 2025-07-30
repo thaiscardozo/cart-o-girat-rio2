@@ -35,7 +35,7 @@ body {
   height: 100%;
   transition: transform 0.8s;
   transform-style: preserve-3d;
-  /* Overflow para evitar estouro */
+  
   overflow: hidden;
 }
 
@@ -65,8 +65,8 @@ body {
 
 /* Responsividade roda pfvo :< */
 
-@media only screen and (max-width: 768px),
-       only screen and (max-height: 812px) {
+@media only screen and (max-width: 360px),
+       only screen and (max-height: 390px) {
   #container {
     flex-direction: column;  
     gap: 10px;               
