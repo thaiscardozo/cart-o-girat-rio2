@@ -59,8 +59,8 @@ body {
 .cartao-postal-back {
   transform: rotateY(180deg);
 }
-*Responsividade*
 
+/*Responsividade :< */
 @media (max-width: 768px) {
   #container {
     flex-direction: column;  
@@ -68,9 +68,16 @@ body {
   }
 
   .cartao-postal {
-    width: 90%;              
-    max-width: 567px;        
+    width: 90%;             
+    max-width: 567px;       
     aspect-ratio: 3 / 2;     
     height: auto;            
+  }
+
+  .cartao-postal-front img,
+  .cartao-postal-back img {
+    max-width: 100%;         
+    height: auto;            
+    object-fit: contain;     
   }
 }
